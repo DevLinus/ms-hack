@@ -9,7 +9,6 @@ interface EventProps {
     description: string
     imageUrl: string
 
-
 }
 const  EventCard: React.FC<EventProps> = (event: EventProps) => {
     const [isClick, setClick] = useState(false);

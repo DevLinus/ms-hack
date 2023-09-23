@@ -1,9 +1,9 @@
 interface Event{
-    id: number;
-    name: string;
-    date: string;
-    location: string;
-    description: string;
+    id: number,
+    name: string,
+    description: string,
+    imageUrl: string,
+    hidden: boolean
 }
 
 export type { Event };
