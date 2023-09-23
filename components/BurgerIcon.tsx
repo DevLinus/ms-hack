@@ -1,31 +1,27 @@
 "use client";
 import { Fragment } from 'react'
 import { Popover, Transition } from '@headlessui/react'
-import { ChevronDownIcon } from '@heroicons/react/20/solid'
+import { ChevronDownIcon, CogIcon, HeartIcon, MagnifyingGlassCircleIcon, MagnifyingGlassIcon, PaperClipIcon } from '@heroicons/react/20/solid'
 import {
   BookOpenIcon,
   BriefcaseIcon,
   GlobeAltIcon,
-  InformationCircleIcon,
-  NewspaperIcon,
   ShieldCheckIcon,
-  UserGroupIcon,
   UsersIcon,
-  VideoCameraIcon,
 } from '@heroicons/react/24/outline'
 
 const engagement = [
-  { name: 'About', href: '#', icon: InformationCircleIcon },
-  { name: 'Customers', href: '#', icon: UsersIcon },
-  { name: 'Press', href: '#', icon: NewspaperIcon },
-  { name: 'Careers', href: '#', icon: BriefcaseIcon },
-  { name: 'Privacy', href: '#', icon: ShieldCheckIcon },
+  { name: 'Suche', href: '#', icon: MagnifyingGlassIcon },
+  { name: 'Entdecke', href: '#', icon: UsersIcon },
+  { name: 'likes', href: '#', icon: HeartIcon },
+  { name: 'Erstellen', href: '#', icon: PaperClipIcon },
+  { name: 'letzte events', href: '#', icon:  BriefcaseIcon},
 ]
 const resources = [
-  { name: 'Community', href: '#', icon: UserGroupIcon },
-  { name: 'Partners', href: '#', icon: GlobeAltIcon },
-  { name: 'Guides', href: '#', icon: BookOpenIcon },
-  { name: 'Webinars', href: '#', icon: VideoCameraIcon },
+  { name: 'AGB', href: '#', icon: GlobeAltIcon },
+  { name: 'Impressum', href: '#', icon: BookOpenIcon },
+  { name: 'Privacy', href: '#', icon: ShieldCheckIcon },
+  { name: 'Settings', href: '#', icon: CogIcon },
 ]
 
 
@@ -37,8 +33,8 @@ export default function BurgerIcon() {
   
         <div className="mx-auto max-w-7xl px-6 lg:px-8">
           <Popover.Button className="inline-flex items-center align-bottom gap-x-1 text-sm font-semibold leading-6 text-gray-900">
-            Solutions
-            <ChevronDownIcon className="h-5 w-5" aria-hidden="true" />
+            
+            <ChevronDownIcon className="h-10 w-10" aria-hidden="true" />
           </Popover.Button>
         </div>
         <div className="mr-0 ml-auto max-w-7xl px-6 lg:px-8 align-top ">
@@ -61,7 +57,7 @@ export default function BurgerIcon() {
           <div className="mx-auto grid max-w-7xl grid-cols-1 gap-x-8 gap-y-10 px-6 py-10 lg:grid-cols-2 lg:px-8">
             <div className="grid grid-cols-2 gap-x-6 sm:gap-x-8">
               <div>
-                <h3 className="text-sm font-medium leading-6 text-gray-500">Engagement</h3>
+                <h3 className="text-sm font-medium leading-6 text-gray-500"></h3>
                 <div className="mt-6 flow-root">
                   <div className="-my-2">
                     {engagement.map((item) => (
@@ -78,7 +74,7 @@ export default function BurgerIcon() {
                 </div>
               </div>
               <div>
-                <h3 className="text-sm font-medium leading-6 text-gray-500">Resources</h3>
+                <h3 className="text-sm font-medium leading-6 text-gray-500"></h3>
                 <div className="mt-6 flow-root">
                   <div className="-my-2">
                     {resources.map((item) => (
@@ -95,6 +91,7 @@ export default function BurgerIcon() {
                 </div>
               </div>
             </div>
+            <img className="mr-0 ml-auto  h-auto w-6/12 " src='racoon.png'></img>
             </div>
          
         </Popover.Panel>
