@@ -1,9 +1,10 @@
-
+"use client"
 import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/20/solid";
 
 import React, { useState } from "react";
 import Heart from "react-animated-heart"
-import HeartVote from "@/components/HeartVote";
+import { Event } from "@/types/event";
+import HeartVote from "./HeartVote";
 
 interface EventProps {
     name: string
@@ -35,10 +36,18 @@ const eventFactory = async (sport: string) => {
     }
 }
 
-const EventCard: React.FC<EventProps> = async (event: EventProps) => {
+const Tag = ({text}: {text: string}) => {
+    return (
+        <span className="inline-flex items-center rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
+            {text}
+        </span>
+    )
+}
 
-
-
+const EventCard = (event: Event) => {
+    const [isClick, setClick] = useState(false);
+    // event = await eventFactory("badminton")
+    console.log(event)
     return (
         <li
             key={event.name}
@@ -52,9 +61,7 @@ const EventCard: React.FC<EventProps> = async (event: EventProps) => {
                     <dd className="text-sm text-gray-500">{event.description}</dd>
                     <dt className="sr-only">Role</dt>
                     <dd className="mt-3">
-                <span className="inline-flex items-center rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
-                  {event.name}
-                </span>
+                {event.tags.map((text, i) => <Tag key={i} text={text} />)}
                     </dd>
                 </dl>
             </div>

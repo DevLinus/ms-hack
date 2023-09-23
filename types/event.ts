@@ -3,7 +3,7 @@ interface Event{
     name: string,
     description: string,
     imageUrl: string,
-    hidden: boolean
+    tags: string[],
 }
 
 export type { Event };

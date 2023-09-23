@@ -16,7 +16,7 @@ export default function  Page() {
 
                 <ul role="list" className="grid grid-cols-1 gap-6 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4">
                     {Data.map((event) => (
-                        <EventCard key={event.name} name={event.name} description={event.description} imageUrl={event.imageUrl}/>))}
+                        <EventCard key={event.name} {...event}/>))}
                 </ul>
             </div>
             </main >
