@@ -20,8 +20,10 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={inter.className}>
+        <div className='h-screen overflow-hidden'>
       <BurgerIcons></BurgerIcons>
         {children}
+        </div>
   </body>
     </html>
   )
