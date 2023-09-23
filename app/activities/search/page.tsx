@@ -1,4 +1,4 @@
-"use client"
+"use client";
 import { PhotoIcon, UserCircleIcon } from '@heroicons/react/24/solid'
 import { useState } from 'react'
 
@@ -9,7 +9,7 @@ export default function Page() {
         <div className="space-y-12">
           <div className="border-b border-white/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-white">Profile</h2>
-  
+
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-4">
                 <label htmlFor="username" className="block text-sm font-medium leading-6 text-white">
@@ -30,7 +30,7 @@ export default function Page() {
                   </div>
                 </div>
               </div>
-              
+
               <div className="col-span-full">
                 <label htmlFor="about" className="block text-sm font-medium leading-6 text-white">
                   About
@@ -46,7 +46,7 @@ export default function Page() {
                 </div>
                 <p className="mt-3 text-sm leading-6 text-gray-400">Write a few sentences about yourself.</p>
               </div>
-  
+
               <div className="col-span-full">
                 <label htmlFor="photo" className="block text-sm font-medium leading-6 text-white">
                   Photo
@@ -61,7 +61,7 @@ export default function Page() {
                   </button>
                 </div>
               </div>
-  
+
               <div className="col-span-full">
                 <label htmlFor="cover-photo" className="block text-sm font-medium leading-6 text-white">
                   Cover photo
@@ -85,11 +85,11 @@ export default function Page() {
               </div>
             </div>
           </div>
-  
+
           <div className="border-b border-white/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-white">Personal Information</h2>
             <p className="mt-1 text-sm leading-6 text-gray-400">Use a permanent address where you can receive mail.</p>
-  
+
             <div className="mt-10 grid grid-cols-1 gap-x-6 gap-y-8 sm:grid-cols-6">
               <div className="sm:col-span-3">
                 <label htmlFor="first-name" className="block text-sm font-medium leading-6 text-white">
@@ -105,7 +105,7 @@ export default function Page() {
                   />
                 </div>
               </div>
-  
+
               <div className="sm:col-span-3">
                 <label htmlFor="last-name" className="block text-sm font-medium leading-6 text-white">
                   Last name
@@ -120,7 +120,7 @@ export default function Page() {
                   />
                 </div>
               </div>
-  
+
               <div className="sm:col-span-4">
                 <label htmlFor="email" className="block text-sm font-medium leading-6 text-white">
                   Email address
@@ -135,7 +135,7 @@ export default function Page() {
                   />
                 </div>
               </div>
-  
+
               <div className="sm:col-span-3">
                 <label htmlFor="country" className="block text-sm font-medium leading-6 text-white">
                   Country
@@ -153,7 +153,7 @@ export default function Page() {
                   </select>
                 </div>
               </div>
-  
+
               <div className="col-span-full">
                 <label htmlFor="street-address" className="block text-sm font-medium leading-6 text-white">
                   Street address
@@ -168,7 +168,7 @@ export default function Page() {
                   />
                 </div>
               </div>
-  
+
               <div className="sm:col-span-2 sm:col-start-1">
                 <label htmlFor="city" className="block text-sm font-medium leading-6 text-white">
                   City
@@ -183,7 +183,7 @@ export default function Page() {
                   />
                 </div>
               </div>
-  
+
               <div className="sm:col-span-2">
                 <label htmlFor="region" className="block text-sm font-medium leading-6 text-white">
                   State / Province
@@ -198,7 +198,7 @@ export default function Page() {
                   />
                 </div>
               </div>
-  
+
               <div className="sm:col-span-2">
                 <label htmlFor="postal-code" className="block text-sm font-medium leading-6 text-white">
                   ZIP / Postal code
@@ -215,13 +215,13 @@ export default function Page() {
               </div>
             </div>
           </div>
-  
+
           <div className="border-b border-white/10 pb-12">
             <h2 className="text-base font-semibold leading-7 text-white">Notifications</h2>
             <p className="mt-1 text-sm leading-6 text-gray-400">
-              We'll always let you know about important changes, but you pick what else you want to hear about.
+              Well always let you know about important changes, but you pick what else you want to hear about.
             </p>
-  
+
             <div className="mt-10 space-y-10">
               <fieldset>
                 <legend className="text-sm font-semibold leading-6 text-white">By Email</legend>
@@ -318,7 +318,7 @@ export default function Page() {
             </div>
           </div>
         </div>
-  
+
         <div className="mt-6 flex items-center justify-end gap-x-6">
           <button type="button" className="text-sm font-semibold leading-6 text-white">
             Cancel
