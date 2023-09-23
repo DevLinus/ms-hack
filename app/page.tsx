@@ -6,10 +6,10 @@ import BurgerIcons from '@/components/BurgerIcon';
 
 export default function Home() {
   return (
-<main >
+<main className="h-screen overflow-hidden">
 
 
-<div className='bg-white h-full' >
+<div className='bg-white'>
  
 <Card title="Suche" text ="Spezifische Events und Vereine"></Card>
 <Divider/>

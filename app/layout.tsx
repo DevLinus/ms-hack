@@ -22,12 +22,7 @@ export default function RootLayout({
       <body className={inter.className}>
       <BurgerIcons></BurgerIcons>
         {children}
-        
-  
-    
-          
-       
-        </body>
+  </body>
     </html>
   )
 }
