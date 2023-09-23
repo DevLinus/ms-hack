@@ -31,14 +31,14 @@ export default function SearchMenu() {
                 type="text"
                 name="card-expiration-date"
                 id="card-expiration-date"
-                className="relative mt-5 block w-full rounded-none rounded-bl-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
+                className="relative mt-5 text-center block w-full rounded-none rounded-bl-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="..."
                 />
                 <button
         type="button"
         className="rounded-none rounded-bl-md bg-black px-3.5 mt-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
       >
-        Button text
+        Suchen ...
       </button>
       </div>
 
@@ -49,7 +49,7 @@ export default function SearchMenu() {
         className="grid items-center border-b border-t border-gray-200"
       >
         <h2 id="filter-heading" className="sr-only">
-          Filters
+          Filter
         </h2>
         <div className="relative col-start-1 row-start-1 py-4">
           <div className="mx-auto flex max-w-7xl space-x-6 divide-x divide-gray-200 px-4 text-sm sm:px-6 lg:px-8">
@@ -64,7 +64,7 @@ export default function SearchMenu() {
             </div>
             <div className="pl-6">
               <button type="button" className="text-gray-500">
-                Clear all
+                Filter zurücksetzen
               </button>
             </div>
           </div>
@@ -107,7 +107,7 @@ export default function SearchMenu() {
             <Menu as="div" className="relative inline-block">
               <div className="flex">
                 <Menu.Button className="group inline-flex justify-center text-sm font-medium text-gray-700 hover:text-gray-900">
-                  Sort
+                  Sortierung
                   <ChevronDownIcon
                     className="-mr-1 ml-1 h-5 w-5 flex-shrink-0 text-gray-400 group-hover:text-gray-500"
                     aria-hidden="true"

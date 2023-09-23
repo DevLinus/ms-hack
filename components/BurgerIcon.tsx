@@ -14,7 +14,7 @@ const engagement = [
   { name: 'Suche', href: '/ActivitySearch', icon: MagnifyingGlassIcon },
   { name: 'Entdecke', href: '/activities/', icon: UsersIcon },
   { name: 'likes', href: '#', icon: HeartIcon },
-  { name: 'Erstellen', href: '#', icon: PaperClipIcon },
+  { name: 'Erstellen', href: '/CreateEvent/', icon: PaperClipIcon },
   { name: 'letzte events', href: '#', icon:  BriefcaseIcon},
 ]
 const resources = [
