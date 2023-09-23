@@ -36,9 +36,9 @@ export default function SearchMenu() {
                 />
                 <button
         type="button"
-        className="rounded-none rounded-bl-md  bg-indigo-600 px-3.5 mt-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-indigo-500 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2 focus-visible:outline-indigo-600"
+        className="rounded-none rounded-bl-md bg-black px-3.5 mt-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
       >
-        Suche...
+        Button text
       </button>
       </div>
 

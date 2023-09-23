@@ -11,8 +11,8 @@ import {
 } from '@heroicons/react/24/outline'
 
 const engagement = [
-  { name: 'Suche', href: '#', icon: MagnifyingGlassIcon },
-  { name: 'Entdecke', href: '#', icon: UsersIcon },
+  { name: 'Suche', href: '/ActivitySearch', icon: MagnifyingGlassIcon },
+  { name: 'Entdecke', href: '/activities/', icon: UsersIcon },
   { name: 'likes', href: '#', icon: HeartIcon },
   { name: 'Erstellen', href: '#', icon: PaperClipIcon },
   { name: 'letzte events', href: '#', icon:  BriefcaseIcon},
@@ -66,7 +66,7 @@ export default function BurgerIcon() {
                         href={item.href}
                         className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900"
                       >
-                        <item.icon className="h-6 w-6 flex-none text-gray-400" aria-hidden="true" />
+                        <item.icon className="h-6 w-6  text-gray-400" aria-hidden="true" />
                         {item.name}
                       </a>
                     ))}

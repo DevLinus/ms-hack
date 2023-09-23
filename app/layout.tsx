@@ -21,8 +21,14 @@ export default function RootLayout({
       
       <body className={roboto.className}>
         <div className='h-screen overflow-hidden'>
+          <div className="z-50 absolute">
       <BurgerIcons></BurgerIcons>
+
+          </div>
+          <div className='mt-8'>
         {children}
+
+          </div>
         </div>
   </body>
     </html>
