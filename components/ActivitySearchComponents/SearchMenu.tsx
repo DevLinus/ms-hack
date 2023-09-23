@@ -1,6 +1,6 @@
 "use client";
 
-import { Fragment } from 'react'
+import { Fragment, useState } from 'react'
 import { Disclosure, Menu, Transition } from '@headlessui/react'
 import { ChevronDownIcon, FunnelIcon } from '@heroicons/react/20/solid'
 
@@ -22,7 +22,13 @@ const filters = [
     
   ]
 
-export default function SearchMenu() {
+interface SearchMenuProps {
+  handleSearch: (query: string) => void,
+}
+
+export default function SearchMenu({handleSearch}: SearchMenuProps) {
+  const [query, setQuery] = useState("...");
+
   return (
     <div className="bg-white">
       <div className="px-4 pt-16 pb-5 text-center sm:px-6 lg:px-8">
@@ -33,10 +39,12 @@ export default function SearchMenu() {
                 id="card-expiration-date"
                 className="relative mt-5 text-center block w-full rounded-none rounded-bl-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="..."
+                onChange={e => setQuery(e.target.value)}
         />
         <button
           type="button"
           className="rounded-none rounded-bl-md bg-black px-3.5 mt-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
+          onClick={e => handleSearch(query)}
         >
           Suchen ...
         </button>

@@ -12,30 +12,6 @@ interface EventProps {
     imageUrl: string
 }
 
-const getImageUrl = async (query: string) => {
-    const url = `https://pixabay.com/api/?key=39616664-766977663574b848a138b03bd&q=${query}`
-    const resp = await fetch(url)
-    const data = await resp.json()
-    const firstHit = data.hits[0]
-    return firstHit.previewUrl
-}
-
-const eventFactory = async (sport: string) => {
-    let imageUrl = ""
-    try{
-    const imageUrl = await getImageUrl(sport)
-    } catch (e) {
-
-        console.log(e)
-    }
-
-    return {
-        name: sport,
-        description: `Meine Freundin Bibi und ich suchen noch 3 Leute um zusammen ${sport} zu spielen!`,
-        imageUrl: imageUrl,
-    }
-}
-
 const Tag = ({text}: {text: string}) => {
     return (
         <span className="inline-flex items-center rounded-full bg-green-50 px-2 py-1 text-xs font-medium text-green-700 ring-1 ring-inset ring-green-600/20">
@@ -45,9 +21,6 @@ const Tag = ({text}: {text: string}) => {
 }
 
 const EventCard = (event: Event) => {
-    const [isClick, setClick] = useState(false);
-    // event = await eventFactory("badminton")
-    console.log(event)
     return (
         <li
             key={event.name}
