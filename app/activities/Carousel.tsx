@@ -1,5 +1,6 @@
 "use client"
 import { useEffect, useState } from "react";
+import EventCard from "@/components/EventCard";
 
 interface CarouselItemProps {
     hidden: boolean,
@@ -14,16 +15,17 @@ const CarouselItem = ({hidden, id}: CarouselItemProps) => {
     console.log(id, hidden, className)
 
     return (
+
+
         <div
+
         className={className}
         data-te-carousel-item
         style={{backfaceVisibility: "hidden"}}>
 
+
         Hello {id}
-        <img
-        src="https://tecdn.b-cdn.net/img/Photos/Slides/img%20(15).jpg"
-        class="block w-full"
-        alt="..." />
+            <EventCard name="Test" description="test" imageUrl="badminton.png"/>
         </div>
     )
 }
