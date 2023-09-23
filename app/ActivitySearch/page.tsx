@@ -6,8 +6,7 @@ export default function  Page() {
         
         <main >
             <div className=' w-screen  h-screen bg-white '>
-             <SearchMenu></SearchMenu>
-                
+             <SearchMenu></SearchMenu>                
              <img className="mr-0 ml-auto  h-auto w-6/12 " src='racoon.png'></img>
             </div>
             </main >

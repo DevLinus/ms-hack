@@ -28,9 +28,6 @@ const CarouselItem = ({hidden, id}: CarouselItemProps) => {
         className={className}
         data-te-carousel-item
         style={{backfaceVisibility: "hidden"}}>
-
-
-        Hello {id}
             <EventCard name="Test" description="test" imageUrl="badminton.png"/>
         </div>
     )
