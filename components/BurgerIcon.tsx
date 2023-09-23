@@ -40,7 +40,7 @@ export default function BurgerIcon() {
           <div className="text-black text-4xl font-semibold">StartMoving</div>
         <div className="max-w-7xl px-6 lg:px-8 align-top ">
           <a href='/'>
-        <img className="mr-0 ml-auto font-semibold h-auto w-2/12 " src='racoon.png' ></img>
+        <img className="mr-0 ml-auto font-semibold h-auto w-3/12 " src='racoon.png' ></img>
         </a>
 
         </div>
