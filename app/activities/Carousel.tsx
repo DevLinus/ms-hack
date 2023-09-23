@@ -7,6 +7,12 @@ interface CarouselItemProps {
     id: number,
 }
 
+const sport = [
+    {id: 1, name:"Badminton", description:"Badminton ist eine der schnellsten und konditionell anspruchsvollsten Sportarten der Welt, bei der der Ball Spitzengeschwindigkeiten von bis zu 350 km", imageUrl:"badminton.png", activeItem: false},
+    {id:2, name:"Fussball", description:"Fussball", imageUrl:"foatball.png", activeItem: false},
+
+]
+
 const carouselItemClassName = "relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
 
 const CarouselItem = ({hidden, id}: CarouselItemProps) => {
@@ -77,7 +83,7 @@ const Carousel = () => {
             <div
                 className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
                 {/* <!--First item--> */}
-                {[0, 1, 2].map(i => <CarouselItem key={i} id={i} hidden={i !== activeItem}/>)}
+                {sport.map(i => <CarouselItem key={i.name} id={i.id} hidden={ false}/>)}
             </div>
 
   {/* <!--Carousel controls - prev item--> */}
