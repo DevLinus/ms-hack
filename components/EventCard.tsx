@@ -22,7 +22,7 @@ const eventFactory = async (sport: string) => {
     const imageUrl = await getImageUrl(sport)
     return {
         name: sport,
-        description: "",
+        description: `Meine Freundin Bibi und ich suchen noch 3 Leute um zusammen ${sport} zu spielen!`,
         imageUrl: imageUrl,
     }
 }
