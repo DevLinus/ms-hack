@@ -8,7 +8,6 @@ export default function Home() {
   return (
 <main >
 
-<header> <BurgerIcons ></BurgerIcons></header>
 
 <div className='bg-white h-full' >
  

@@ -27,7 +27,7 @@ const resources = [
 
 export default function BurgerIcon() {
   return (
-    <Popover className="absolute isolate z-50 shadow ">
+    <Popover className=" isolate z-50 shadow ">
       <div className="bg-white py-5">
         <div className='flex'>
   
