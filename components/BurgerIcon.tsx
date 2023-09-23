@@ -38,7 +38,9 @@ export default function BurgerIcon() {
           </Popover.Button>
         </div>
         <div className="mr-0 ml-auto max-w-7xl px-6 lg:px-8 align-top ">
-        <img className="mr-0 ml-auto  h-auto w-2/12 " src='racoon.png'></img>
+          <a href='/'>
+        <img className="mr-0 ml-auto  h-auto w-2/12 " src='racoon.png' ></img>
+        </a>
 
         </div>
         </div>
