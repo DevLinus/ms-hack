@@ -1,8 +1,9 @@
-"use client";
+
 import {EnvelopeIcon, PhoneIcon} from "@heroicons/react/20/solid";
 
 import React, { useState } from "react";
 import Heart from "react-animated-heart"
+import HeartVote from "@/components/HeartVote";
 
 interface EventProps {
     name: string
@@ -19,7 +20,14 @@ const getImageUrl = async (query: string) => {
 }
 
 const eventFactory = async (sport: string) => {
+    let imageUrl = ""
+    try{
     const imageUrl = await getImageUrl(sport)
+    } catch (e) {
+
+        console.log(e)
+    }
+
     return {
         name: sport,
         description: `Meine Freundin Bibi und ich suchen noch 3 Leute um zusammen ${sport} zu spielen!`,
@@ -28,8 +36,9 @@ const eventFactory = async (sport: string) => {
 }
 
 const EventCard: React.FC<EventProps> = async (event: EventProps) => {
-    const [isClick, setClick] = useState(false);
-    event = await eventFactory("badminton")
+
+
+
     return (
         <li
             key={event.name}
@@ -56,7 +65,7 @@ const EventCard: React.FC<EventProps> = async (event: EventProps) => {
 
                             className="relative -mr-px inline-flex w-0 flex-1 items-center justify-center gap-x-3 rounded-bl-lg border border-transparent py-4 text-sm font-semibold text-gray-900"
                         >
-                            <Heart isClick={isClick} onClick={() => setClick(!isClick)} />
+                            <HeartVote />
                         </a>
                     </div>
                     <div className="-ml-px flex w-0 flex-1">

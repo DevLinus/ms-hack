@@ -20,12 +20,11 @@ export default function RootLayout({
     <html lang="en">
       
       <body className={roboto.className}>
-        <div className='h-screen w-screen overflow-hidden'>
+        <div className='h-screen w-screen '>
           <div className="z-50 absolute">
       <BurgerIcons></BurgerIcons>
-
           </div>
-          <div className='mt-8'>
+          <div className='mt-8 pt-6'>
         {children}
 
           </div>

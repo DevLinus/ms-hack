@@ -44,7 +44,7 @@ const Carousel = () => {
     return (
         <div
             id="carouselExampleCaptions"
-            className="relative"
+            className="relative pt-12"
             data-te-carousel-init
             data-te-ride="carousel">
             {/* <!--Carousel indicators--> */}
