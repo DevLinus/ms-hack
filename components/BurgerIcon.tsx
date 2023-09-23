@@ -79,7 +79,7 @@ export default function BurgerIcon() {
                   <div className="-my-2">
                     {resources.map((item) => (
                       <a
-                        key={item.name}
+                        key={item.name + '2'}
                         href={item.href}
                         className="flex gap-x-4 py-2 text-sm font-semibold leading-6 text-gray-900"
                       >
