@@ -33,15 +33,14 @@ export default function SearchMenu() {
                 id="card-expiration-date"
                 className="relative mt-5 text-center block w-full rounded-none rounded-bl-md border-0 bg-transparent py-1.5 text-gray-900 ring-1 ring-inset ring-gray-300 placeholder:text-gray-400 focus:z-10 focus:ring-2 focus:ring-inset focus:ring-indigo-600 sm:text-sm sm:leading-6"
                 placeholder="..."
-                />
-                <button
-        type="button"
-        className="rounded-none rounded-bl-md bg-black px-3.5 mt-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
-      >
-        Suchen ...
-      </button>
+        />
+        <button
+          type="button"
+          className="rounded-none rounded-bl-md bg-black px-3.5 mt-5 py-2.5 text-sm font-semibold text-white shadow-sm hover:bg-white/20"
+        >
+          Suchen ...
+        </button>
       </div>
-
       {/* Filters */}
       <Disclosure
         as="section"

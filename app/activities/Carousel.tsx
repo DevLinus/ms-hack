@@ -7,16 +7,21 @@ import {Data} from "@/app/activities/data";
 
 const carouselItemClassName = "relative float-left -mr-[100%] w-full transition-transform duration-[600ms] ease-in-out motion-reduce:transition-none"
 
-const CarouselItem: React.FC<Event> = (sportEvent: Event) => {
-    const extra = sportEvent.hidden ? " hidden" : ""
+interface CarouselItemProps {
+    event: Event, 
+    hidden: boolean,
+}
+
+const CarouselItem: React.FC<Event> = ({event, hidden}: CarouselItemProps) => {
+    const extra = hidden ? " hidden" : ""
     const className = carouselItemClassName + extra + "pt-12"
     {console.log(extra)}
     return (
         <div
-            className={sportEvent.hidden ? "hidden" : ""}
+            className={hidden ? "hidden" : ""}
             data-te-carousel-item
             style={{backfaceVisibility: "hidden"}}>
-            <EventCard name={sportEvent.name} description={sportEvent.description} imageUrl={sportEvent.imageUrl}/>
+            <EventCard {...event}/>
         </div>
     )
 }
@@ -57,7 +62,7 @@ const Carousel = () => {
             <div
                 className="relative w-full overflow-hidden after:clear-both after:block after:content-['']">
                 {/* <!--First item--> */}
-                {Data.map(i => <CarouselItem key={i.id} hidden={i !== Data[activeItem]} id={i.id} imageUrl={i.imageUrl} name={i.name} description={i.description} />)}
+                {Data.map((event, i) => <CarouselItem key={i} hidden={i !== activeItem} event={event} />)}
             </div>
 
             {/* <!--Carousel controls - prev item--> */}
