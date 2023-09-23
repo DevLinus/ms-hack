@@ -37,9 +37,10 @@ export default function BurgerIcon() {
             <ChevronDownIcon className="h-10 w-10" aria-hidden="true" />
           </Popover.Button>
         </div>
-        <div className="mr-0 ml-auto max-w-7xl px-6 lg:px-8 align-top ">
+          <div className="text-black text-4xl font-semibold">StartMoving</div>
+        <div className="max-w-7xl px-6 lg:px-8 align-top ">
           <a href='/'>
-        <img className="mr-0 ml-auto  h-auto w-2/12 " src='racoon.png' ></img>
+        <img className="mr-0 ml-auto font-semibold h-auto w-2/12 " src='racoon.png' ></img>
         </a>
 
         </div>
@@ -93,6 +94,7 @@ export default function BurgerIcon() {
                 </div>
               </div>
             </div>
+
             <img className="mr-0 ml-auto  h-auto w-6/12 " src='racoon.png'></img>
             </div>
          

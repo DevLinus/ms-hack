@@ -36,12 +36,16 @@ const Carousel = () => {
         init();
     }, []);
 
-    const handlePrev = () => {setActiveItem( activeItem - 1)
+    const handlePrev = () => {
+        if (activeItem > 0)
+            setActiveItem( activeItem - 1)
+
     console.log(activeItem);
     }
 
     const handleNext = () => {
-        setActiveItem(activeItem + 1)
+        if (activeItem < Data.length - 1)
+            setActiveItem(activeItem + 1)
         console.log(activeItem);
     }
 
