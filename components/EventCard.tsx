@@ -8,13 +8,31 @@ interface EventProps {
     name: string
     description: string
     imageUrl: string
-
 }
-const  EventCard: React.FC<EventProps> = (event: EventProps) => {
+
+const getImageUrl = async (query: string) => {
+    const url = `https://pixabay.com/api/?key=39616664-766977663574b848a138b03bd&q=${query}`
+    const resp = await fetch(url)
+    const data = await resp.json()
+    const firstHit = data.hits[0]
+    return firstHit.previewUrl
+}
+
+const eventFactory = async (sport: string) => {
+    const imageUrl = await getImageUrl(sport)
+    return {
+        name: sport,
+        description: `Meine Freundin Bibi und ich suchen noch 3 Leute um zusammen ${sport} zu spielen!`,
+        imageUrl: imageUrl,
+    }
+}
+
+const EventCard: React.FC<EventProps> = async (event: EventProps) => {
     const [isClick, setClick] = useState(false);
+    event = await eventFactory("badminton")
     return (
         <li
-                key={event.name}
+            key={event.name}
             className="col-span-1 flex flex-col divide-y divide-gray-200 rounded-lg bg-white text-center shadow"
         >
             <div className="flex flex-1 flex-col p-8">

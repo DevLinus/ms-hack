@@ -4,7 +4,10 @@ import EventCard from "@/components/EventCard";
 import { Event } from '@/types/event';
 import {Data} from "@/app/activities/data";
 
+
+
 export default function  Page() {
+    
     return (
         
         <main >

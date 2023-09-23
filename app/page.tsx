@@ -23,7 +23,7 @@ export default function Home() {
 </div>
 </a >
 <Divider/>
-<a href='/activities/'>
+<a href='/CreateEvent\/'>
 <div>
   
 <Card title="Erstellen" text ="deine eigenen Events"></Card>
